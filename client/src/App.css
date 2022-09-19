@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto&display=swap');
+
+
+
+.maintitle{
+    color: white;
+    margin-right: 10%;
+    margin-left: -1%;
+}
+.maintitle2{
+    color: rgb(158, 92, 166);
+}.body{
+    background-color: black;
+}
+.backround{
+    background-color: black;
+}
+.backround1{
+    height: 2000px;
+    width: 100%;
+    background: rgb(0,0,0);
+background: linear-gradient(342deg, rgba(0,0,0,0.639093137254902) 0%, rgba(141,54,168,0.4962359943977591) 32%, rgba(0,0,0,1) 89%);
+}
+.backroundspecial{
+    height: 2000px;
+    width: 100%;
+    background-color: rgb(146, 129, 206);
+}
+.backroundspecial1{
+    height: 100%;
+    padding-bottom: 300px;
+    width: 100%;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(172,170,168,1) 100%);
+}
+.backroundspecial2{
+    height: 2000px;
+    width: 100%;
+    background-color: rgb(229, 227, 227);
+}
+.backround2{
+    height: 1200px;
+    width: 100%;
+    background-color: rgb(30, 29, 29);
+}
+.searchcont{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.ltter{
+    margin-top: 100px;
+    display: inline-flex;
+    color: rgba(187, 110, 180, 0.87);
+    background-color: rgb(191, 185, 185);
+    width: 60%;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    place-content: center;
+    font-style: oblique ;
+    border-radius: 20px;
+    border-color: blueviolet;
+    border: solid 0.5px;
+    box-shadow: 0px 10px 13px -7px #000000, 38px 4px 11px -6px rgba(0,0,0,0);
+
+}
+
+.searchlogo{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    margin-top: 400px;
+}
+.titles1{
+    margin-top: 300px;
+    color: white;
+    font-size: 120px;
+    width: 70%;
+
+
+}
+.gettitle{
+    color: yellow;
+    width: 20%;
+}
+.registertitle{
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 3%;
+}
+.registcont{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    place-content: center;
+    text-align: center;
+}
+.flex-column{
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-decoration: none;
+    color: white;
+    
+}
+.profileLink1{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    border-top-right-radius: 20px;
+    background-color: #545156;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.profileLink1:hover{
+    background-color: rgb(216, 151, 246);
+}
+.profileLink2{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: #c696cc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.profileLink2:hover{
+    background-color: rgb(216, 151, 246);
+}
+.profileLink3{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    margin-bottom: 5%;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #545156;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.profileLink3:hover{
+    background-color: rgb(216, 151, 246);
+}
+.profileLink4{
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #c696cc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.profileLink4:hover{
+    background-color: rgb(176, 114, 114);
+}
+.registbody{
+    display: inline-flex;
+    flex-direction: row;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+}
+.createuser1{
+    display: flex;
+    width: 35%;
+    background: rgb(204,158,213);
+    background: linear-gradient(90deg, rgba(204,158,213,1) 4%, rgba(204,181,186,1) 100%);
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    border-top-left-radius: 50px;
+    border: solid;
+    border-color: none;
+}
+.createuser1:hover{
+    border: solid, 10px;
+    border-color: rgb(240, 245, 144);
+    margin-top: -10px;
+    margin-left: -5px;
+}
+.createuser2{
+    display: flex;
+    width: 35%;
+    background: rgb(240,219,219);
+    background: linear-gradient(342deg, rgba(240,219,219,0.639093137254902) 0%, rgba(214,218,199,0.9108018207282913) 10%, rgba(244,232,232,1) 89%);
+    align-items: center;
+    flex-direction: column;
+    padding: 3%;
+    border-top-right-radius: 50px;
+    border: solid;
+    border-color: none;
+}
+.createuser2:hover{
+    border: solid, 10px;
+    border-color: rgb(119, 1, 255);
+    margin-top: -10px;
+    margin-left: -5px;
+    
+}
+.registuser{
+    color: rgb(36, 36, 40);
+    margin-bottom: 15%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.subtitle{
+    color: rgb(92, 92, 76);
+    margin-bottom: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+.descriptions{
+    color: white;
+    font-size: 23px;
+    margin-bottom: 3%;
+    font-family: 'Roboto', sans-serif;
+}
+.undertitle{
+    margin-top: 10%;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10%;
+    font-size: 22px;
+    font-weight: bold;
+    color: aliceblue;
+}
+.button1{
+
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+.button1:hover{
+    font-size: 22px;
+    box-shadow: 1px 2px 17px 9px rgba(0,0,0,0.91)
+}
+.registuser2{
+    color:  #332a3b;
+    margin-bottom: 15%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.subtitle2{
+    color: rgb(101, 100, 70);
+    margin-bottom: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+.descriptions2{
+    color: #433b4a;
+    font-size: 22px;
+    margin-bottom: 3%;
+    font-family: 'Roboto', sans-serif;
+}
+.undertitle2{
+    margin-top: 10%;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10%;
+    font-size: 22px;
+    font-weight: bold;
+}
+.spanget{
+    color: rgb(241, 241, 97);
+    font-weight: bold;
+}
+.titleformcont{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    place-content: center;
+    text-align: center;
+}
+.regtitle{
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+.formcont{
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 10% ;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    place-content: center;
+    text-align: center;
+    color: rgba(86, 46, 46, 0.15);
+    background-color: rgba(215, 210, 210, 0.161);
+}
+.logincont{
+    display: flex;
+    padding-bottom: 10% ;
+    width: 60%;
+    height: 60%;
+    place-content: center;
+    text-align: center;
+    color: rgba(86, 46, 46, 0.15);
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,0.3449754901960784) 100%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.form1{
+    width: 50%;
+    color: white;
+    
+}
+.whitetext{
+    color: white;
+}
+
+.login{
+    margin-top: 250px;
+    width: 30%;
+    
+}
+.login1{
+    margin-top: 250px;
+    width: 30%;
+    color: white;
+}
+.login2{
+    margin-top: 250px;
+    width: 30%;
+    color: rgb(61, 55, 65);
+}
+.logincont{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    place-content: center;
+    text-align: center;
+}
+.logintitle{
+    text-align: center;
+    color: white;
+    display: flex;
+    place-content: center;
+    margin-bottom: 50px;
+}
+.logintitle2{
+    text-align: center;
+    color: rgb(86, 79, 98);
+    display: flex;
+    place-content: center;
+    margin-bottom: 50px;
+}
+.checktxt{
+    color:white;
+    text-align: start;
+}
+.loginuser1{
+    display: flex;
+    width: 35%;
+    background: rgb(204,158,213);
+    background: linear-gradient(90deg, rgba(204,158,213,1) 4%, rgba(204,181,186,1) 100%);
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px ;
+    border: solid;
+    border-color: none;
+}
+.loginuser1:hover{
+    border: solid, 10px;
+    border-color: rgb(240, 245, 144);
+    margin-top: -10px;
+    margin-left: -5px;
+}
+.loginuser2{
+    display: flex;
+    width: 35%;
+    background-color: #fffffcc8;
+    align-items: center;
+    flex-direction: column;
+    padding: 3%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px ;
+    border: solid;
+    border-color: none;
+}
+.loginuser2:hover{
+    border: solid, 10px;
+    border-color: rgb(119, 1, 255);
+    margin-top: -10px;
+    margin-left: -5px;
+    
+}
+.profilecont{
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    place-content: center;
+    text-align: center;
+}
+.profilebody{
+    display: inline-flex;
+    flex-direction: row;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+}
+.profilebody2{
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.profilebody3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 300px;
+}
+.profilecol1{
+    display: flex;
+    width: 70%;
+    background: rgba(149, 149, 149, 0.287);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5%;
+    justify-content: space-evenly;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.profilecol2{
+    display: flex;
+    width: 30%;
+    background: rgba(149, 149, 149, 0.287);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3%;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.profilecol3{
+    display: flex;
+    width: 100%;
+    background: rgba(149, 149, 149, 0.287);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5%;
+    justify-content: space-evenly;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.mediacont{
+    display: inline-flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    margin-bottom: 3%;
+    
+}
+.profilecol4{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.profilecol5{
+    display: flex;
+    width: 100%;
+    padding: 3%;
+    height: 100%;
+    background: black;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.profiletitle{
+    color: rgb(248, 248, 248);
+    margin-bottom: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    text-decoration: underline;
+    
+}
+.songsSpecs{
+    color: rgb(248, 248, 248);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.profiledescriptions{
+    color: white;
+    font-size: 23px;
+    margin-bottom: 50%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: underline;
+}
+.profilepics{
+    width: 100%;
+    color: white;
+    display: flex;
+}
+.soundpics{
+    width: 60%;
+    color: white;
+    display: flex;
+}
+.lateraltabs{
+    width: 100%;
+}
