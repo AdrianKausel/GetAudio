@@ -1,5 +1,5 @@
 import React from "react";
-import profilePic from "../assets/profile1.png"
+import profilePic from "../assets/profile4.png"
 
 const Tab4 = () =>{
 

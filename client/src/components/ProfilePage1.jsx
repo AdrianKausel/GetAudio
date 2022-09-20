@@ -19,7 +19,7 @@ const ProfilePage1 = () => {
         <div className="backroundspecial1">
             <Container>
             <div className="profilecont">
-                    <h1 className="registertitle">Profile</h1>
+                    <h1 className="registertitle1">Profile</h1>
                 </div>
                 <div>
                 <Tab.Container defaultActiveKey="first">

@@ -6,6 +6,8 @@ module.exports = app => {
     app.get('/api/usercomposer/:id', UserComposerController.newFind);
 
     app.post('/api/usercomposer/new', UserComposerController.newCreate);
+
+    app.post('/api/usercomposer/login',UserComposerController.login);
     
     app.put('/api/usercomposer/update/:id', UserComposerController.newUpdate);
     

@@ -44,8 +44,8 @@ const NavBar =()=> {
                         </React.Fragment>
                         }
                         {context.user.firstName && <React.Fragment>
-                        <Nav.Link><Link to='/profile'  style={{textDecoration: 'none', color: 'white'}}>{context.user.firstName}</Link></Nav.Link>
-                        <Nav.Link><Link to='/' style={{textDecoration: 'none', color: 'white'}}>Log Out</Link></Nav.Link>
+                        <Nav.Link><Link to='/profile'  style={{textDecoration: 'none', color: 'white', fontSize:"large" ,fontWeight: "bold"}}>{context.user.firstName}<span>{""}</span>{context.user.lastName}</Link></Nav.Link>
+                        <Nav.Link><Link to='/' style={{textDecoration: 'none',fontSize:"large", color: 'white'}} >Log Out</Link></Nav.Link>
                         </React.Fragment>
                         }
                     </Nav>

@@ -5,13 +5,16 @@ import Form from 'react-bootstrap/Form';
 import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import axios from "axios";
 
 const initialState = {
     firstName: '',
     lastName: '',
     artistName: '',
-    emailAdress: '',
+    email: '',
     password: '',
+    confirmPassword: '',
 }
 
 const FormType1 = ({createData}) => {
@@ -25,12 +28,19 @@ const FormType1 = ({createData}) => {
         })
     }
 
-    const createUser1 = async e =>{
+    const createUser1 =  e =>{
         e.preventDefault()
-        createData(form)
-        navigate('/login')
-    }
-
+        axios.post('http://localhost:8000/api/usercomposer/new', form)
+        .then(resp => {
+            if(!resp.error){
+                Swal.fire("Register", "Success!", "success")
+                alert('registrated')
+                navigate('/LogIn')
+                return true
+            }
+            else {return false}
+            })
+        }
     return(
         <div className="backround1">
             <Container>
@@ -53,7 +63,7 @@ const FormType1 = ({createData}) => {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" name='emailAdress' value={form.emailAdress} onChange={updateForm} />
+                            <Form.Control type="email" placeholder="Enter email" name='email' value={form.email} onChange={updateForm} />
                         </Form.Group>
                         <p> Music Genres</p>
                         <Form.Select aria-label="Default select example">
@@ -66,6 +76,10 @@ const FormType1 = ({createData}) => {
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="Password" name='password' value={form.password} onChange={updateForm} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Confirm Password</Form.Label>
+                            <Form.Control type="password" placeholder="Confirm Password" name='confirmPassword' value={form.confirmPassword} onChange={updateForm} />
                         </Form.Group>
                         <Button variant="primary" type="submit">
                             Register

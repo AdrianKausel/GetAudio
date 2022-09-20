@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const bcrypt = require('bcrypt');
 
 const UserComposerSchema = mongoose.Schema({
     firstName: {
@@ -14,13 +14,33 @@ const UserComposerSchema = mongoose.Schema({
         type: String,
         required: [true, 'Country Required']
     },
-    emailAdress: {
+    email: {
         type: String,
     },
     password: {
         type: String,
     }
 }, {timestamps:true});  
+
+    UserComposerSchema.virtual('confirmPassword')
+    .get( () => this._confirmPassword )
+    .set( value => this._confirmPassword = value );
+
+    UserComposerSchema.pre('validate', function(next) {
+    if (this.password !== this.confirmPassword) {
+        this.invalidate('confirmPassword', 'Password must match confirm password');
+    }
+    next();
+    });
+
+    UserComposerSchema.pre('save', function(next) {
+    bcrypt.hash(this.password, 10)
+        .then(hash => {
+        this.password = hash;
+        next();
+    });
+});
+
 
 const UserComposer = mongoose.model('User Composer', UserComposerSchema);
 

@@ -62,7 +62,8 @@ const FormType2 = () => {
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="Password" name='password' value={form.password} onChange={updateForm} />
-                        </Form.Group>                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                        </Form.Group>                        
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Confirm Password</Form.Label>
                             <Form.Control type="password" placeholder="Confirm Password" name='confirmPassword' value={form.confirmPassword} onChange={updateForm} />
                         </Form.Group>

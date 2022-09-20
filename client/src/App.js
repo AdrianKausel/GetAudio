@@ -17,33 +17,9 @@ import Swal from 'sweetalert2';
 
 
 function App() {
-  const [datas, setDatas] = useState([])
+
   const [user, setUser] = useState ({})
-  const navigate= useNavigate()
-
-  const createUser = (obj)=>{
-    return axios.post('http://localhost:8000/api/usercomposer/new', obj)
-    .then(resp => {
-      if(!resp.data.error){
-        setDatas([...datas, resp.data.userComp])
-        Swal.fire("Register", "Success!", "success")
-        return true
-      }
-      else {return false}
-    })
-  }
-
-  const login2 = (obj)=>{
-    return axios.post('http://localhost:8000/api/userstandard/login', obj)
-    .then(resp => {
-      if(!resp.error){
-        Swal.fire("Login", "Success!", "success")
-        navigate('/Profile')
-        return true
-      }
-      else {return false}
-    })
-  }
+  
   return (
     <NavBarContext.Provider value={{user, setUser}} >
       <NavBar/>
@@ -51,11 +27,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>}/>
           <Route path="/register" element={<RegisterWindow/>}></Route>
-          <Route path="/registerUserType1" element={<FormType1 createData={createUser}  />}></Route>
+          <Route path="/registerUserType1" element={<FormType1/>}></Route>
           <Route path="/registerUserType2" element={<FormType2 />}></Route>
           <Route path='/LogIn' element={<LoginView/>}></Route>
           <Route path='/LogInUserType1' element={<LogInWindow/>}></Route>
-          <Route path='/LogInUserType2' element={<LogInWindow2 createData3={login2}/>}></Route>
+          <Route path='/LogInUserType2' element={<LogInWindow2/>}></Route>
           <Route path='/Profile' element={<ProfilePage1 />}></Route>
 
         </Routes>

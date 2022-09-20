@@ -1,7 +1,7 @@
 const UserStandard = require('../models/userStandard.models');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const secretKey = require('../config/jwt.config')
+const secret = require('../config/jwt.config')
 
 module.exports.List = (req, res) => {
     UserStandard.find()
@@ -42,8 +42,10 @@ module.exports.newCreate = (req, res) => {
 }
 
 module.exports.login = (req, res) => {
+    console.log(req.body)
     UserStandard.findOne({ email: req.body.email })
     .then(user => {
+        console.log(user)
             if (user === null) {
                 res.json({
                     error:true,
@@ -52,14 +54,17 @@ module.exports.login = (req, res) => {
             } else {
                 bcrypt.compare(req.body.password, user.password)
                 .then(valid => {
+                    console.log(valid)
                     if (valid) {
                         const newJWT = jwt.sign({
                         _id: user._id,
-                    })
-                    res.cookie("usertoken", newJWT, secretKey, {
+
+                    },secret.secretKey)
+                    console.log("hello")
+                    res.cookie("usertoken", newJWT,{
                         httpOnly: true
                     })
-                    .json({ error: false});
+                    .json({ error: false, user: {firstName: user.firstName, lastName: user.lastName, email: user.email}});
                 } else {
                     res.json({ 
                         error:true

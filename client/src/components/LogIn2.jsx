@@ -6,6 +6,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import NavBarContext from "../context/NavBarContext";
 
 const initialState = {
     email: "",
@@ -14,6 +16,7 @@ const initialState = {
 const LogInWindow2 = () =>{
     const [form, setForm] = useState(initialState)
     const navigate = useNavigate()
+    const context = useContext(NavBarContext)
     
     const updateForm = ({target: {name, value}}) => {
         setForm({
@@ -23,17 +26,16 @@ const LogInWindow2 = () =>{
     }
     const login = e =>{
         e.preventDefault();
-        axios.post('http://localhost:8000/api/userstandard/login', form)
+        axios.post('/api/userstandard/login', form)
         .then(resp => {
+            console.log(resp.data.user)
             if(!resp.error){
-
+                context.setUser(resp.data.user);
+                    navigate('/Profile');
             } else {
                 Swal.fire('login', 'error')
             }
         })
-
-
-
     }
     return(
         <div className="backroundspecial2">
