@@ -31,7 +31,7 @@ const LogInWindow2 = () =>{
             console.log(resp.data.user)
             if(!resp.error){
                 context.setUser(resp.data.user);
-                    navigate('/Profile');
+                    navigate('/Profile2');
             } else {
                 Swal.fire('login', 'error')
             }

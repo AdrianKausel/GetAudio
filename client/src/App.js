@@ -14,6 +14,7 @@ import LogInWindow2 from './components/LogIn2';
 import LoginView from './components/LoginView';
 import ProfilePage1 from './components/ProfilePage1';
 import Swal from 'sweetalert2';
+import ProfilePage2 from './components/ProfilePage2';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path='/LogInUserType1' element={<LogInWindow/>}></Route>
           <Route path='/LogInUserType2' element={<LogInWindow2/>}></Route>
           <Route path='/Profile' element={<ProfilePage1 />}></Route>
+          <Route path='/Profile2' element={<ProfilePage2 />}></Route>
 
         </Routes>
 

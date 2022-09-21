@@ -34,7 +34,6 @@ const FormType1 = ({createData}) => {
         .then(resp => {
             if(!resp.error){
                 Swal.fire("Register", "Success!", "success")
-                alert('registrated')
                 navigate('/LogIn')
                 return true
             }

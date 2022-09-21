@@ -30,12 +30,12 @@ const LogInWindow = () =>{
         axios.post('/api/usercomposer/login', form)
         .then(resp => {
             console.log(resp.data.user)
-            if(!resp.error){
+            if(!resp.data.error){
                 context.setUser(resp.data.user);
                 Swal.fire("Login", `Welcome ${resp.data.user.firstName} ${''} ${resp.data.user.lastName}!`, "success")
                 navigate('/Profile');
             } else {
-                Swal.fire('login', 'error')
+                Swal.fire('Login', 'Incorrect user or password', 'error')
             }
         })
     }

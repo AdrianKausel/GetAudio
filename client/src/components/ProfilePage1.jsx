@@ -11,6 +11,7 @@ import Tab1 from "./Tab1";
 import Tab2 from "./Tab2";
 import Tab3 from "./Tab3";
 import Tab4 from "./Tab4";
+import Tab22 from "./Tab22";
 
 const ProfilePage1 = () => {
     const [hover, setHover] = useState(false);
@@ -46,7 +47,7 @@ const ProfilePage1 = () => {
                             <Tab1/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
-                            <Tab2 />
+                            <Tab22 />
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
                             <Tab3 />
