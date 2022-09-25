@@ -9,7 +9,7 @@ const boxVariant = {
     hidden: { opacity: 0, scale: 0, x:-600 }
 };
 
-const MediaDisplay = () => {
+const MediaDisplay = (artist) => {
 
     const control = useAnimation();
     const [ref, inView] = useInView();

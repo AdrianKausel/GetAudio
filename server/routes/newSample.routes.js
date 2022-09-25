@@ -1,11 +1,11 @@
-const MediaFilesController = require('../controllers/mediaFiles.controllers');
+const MediaFilesController = require('../controllers/newSample.controllers');
 const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' })
 
 module.exports = app => {
-    app.get('/api/mediafiles', MediaFilesController.List);
+    app.get('/api/newSamples', MediaFilesController.List);
 
-    app.get('/api/mediafiles/:id', MediaFilesController.newFind);
+    /* app.get('/api/mediafiles/:id', MediaFilesController.newFind);
 
     app.post('/api/mediafiles/new', MediaFilesController.newCreate);
 
@@ -16,8 +16,8 @@ module.exports = app => {
 
     })
     
-    app.delete('/api/mediafiles/delete/:id', MediaFilesController.newDelete);
-
-    //app.post('/api/mediafiles/newSample', MediaFilesController.newSample);
+    app.delete('/api/mediafiles/delete/:id', MediaFilesController.newDelete); */
+ 
+    app.post('/api/newSamples/new', MediaFilesController.newSample);
 
 }

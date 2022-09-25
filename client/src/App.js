@@ -15,6 +15,8 @@ import LoginView from './components/LoginView';
 import ProfilePage1 from './components/ProfilePage1';
 import Swal from 'sweetalert2';
 import ProfilePage2 from './components/ProfilePage2';
+import AddComponent from './components/AddComponent';
+import AddComponentScreen from './components/AddComponentScreen';
 
 
 function App() {
@@ -35,6 +37,9 @@ function App() {
           <Route path='/LogInUserType2' element={<LogInWindow2/>}></Route>
           <Route path='/Profile' element={<ProfilePage1 />}></Route>
           <Route path='/Profile2' element={<ProfilePage2 />}></Route>
+
+          <Route path='/add' element={<AddComponentScreen />}></Route>
+
 
         </Routes>
 

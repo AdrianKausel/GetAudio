@@ -16,5 +16,6 @@ require('./server/config/db.config')
 require('./server/routes/userComposer.routes')(app)
 require('./server/routes/userStandard.routes')(app)
 require('./server/routes/mediaFiles.routes')(app)
+require('./server/routes/newSample.routes')(app)
 
 app.listen(port, () => console.log('Server UP'))
