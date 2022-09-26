@@ -3,13 +3,15 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Container from "react-bootstrap/esm/Container";
 import soundPic from "../assets/sound2.gif"
+import ReactAudioPlayer from 'react-audio-player';
+
 
 const boxVariant = {
     visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.8 } },
     hidden: { opacity: 0, scale: 0, x:-600 }
 };
 
-const MediaDisplay = (artist) => {
+const MediaDisplay = (props) => {
 
     const control = useAnimation();
     const [ref, inView] = useInView();
@@ -36,11 +38,19 @@ const MediaDisplay = (artist) => {
                                     <div className="profilecol4">
                                         <img className="soundpics" src={soundPic}/>
                                     </div>
-                                    <div className="profilecol5">
-                                        <ul>
-                                            <h3 className="songsSpecs"> Artist Name:</h3>
-                                            <h3 className="songsSpecs"> Song Name:</h3>
-                                        </ul>
+                                    <div className="profilecol5 d-flex flex-wrap flex-row justify-content-start">
+                                        <h3 className="songsSpecs w-100"> Artist Name: {props.audioUrl}</h3>
+                                        <h3 className="songsSpecs w-100"> Song Name:</h3>
+                                        <ReactAudioPlayer
+                                            className="d-flex justify-self-center w-100"
+                                            src={props.audioUrl}
+                                            
+                                            autoPlay={false}
+                                            controls
+                                        />
+                                    </div>
+                                    <div>
+
                                     </div>
                                 </div>
                                 

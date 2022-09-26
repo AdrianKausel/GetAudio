@@ -8,10 +8,9 @@ import Container from "react-bootstrap/esm/Container";
 import { Link } from "react-router-dom";
 import profilePic from "../assets/profilepic.png"
 import Tab1 from "./Tab1";
-import Tab2 from "./Tab2";
 import Tab3 from "./Tab3";
 import Tab4 from "./Tab4";
-import Tab22 from "./Tab22";
+import Tab2 from "./Tab2";
 
 const ProfilePage1 = () => {
     const [hover, setHover] = useState(false);
@@ -47,7 +46,7 @@ const ProfilePage1 = () => {
                             <Tab1/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
-                            <Tab22 />
+                            <Tab2 />
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
                             <Tab3 />

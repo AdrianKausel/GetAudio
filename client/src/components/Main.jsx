@@ -14,6 +14,7 @@ const Main = () => {
 
     const control = useAnimation();
     const [ref, inView] = useInView();
+    const audioUrl = 'https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3';
 
     const [selectTag1,setSelectTag1]=useState('');
 
@@ -36,7 +37,7 @@ const Main = () => {
 
                     <br/>
 
-                    {/* <AddComponent/> */}
+                    {/* <AddCompone nt/> */}
 
                     <div className="div-2">
                         <h2>
@@ -68,7 +69,7 @@ const Main = () => {
                     <div>
                         <MediaTitleDisplay/>
 
-                        <MediaDisplay/>
+                        <MediaDisplay audioUrl={audioUrl} />
                         <MediaDisplay/>
                         <MediaDisplay/>
                         <MediaDisplay/>

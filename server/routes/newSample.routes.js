@@ -1,9 +1,11 @@
-const MediaFilesController = require('../controllers/newSample.controllers');
+
+const audioFilesController= require('../controllers/audiofiles.controllers');
 const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' })
+const {authenticate} = require('../config/jwt.config');
 
 module.exports = app => {
-    app.get('/api/newSamples', MediaFilesController.List);
+    app.post('/api/newSamples/new', audioFilesController.uploadAudioFile);
 
     /* app.get('/api/mediafiles/:id', MediaFilesController.newFind);
 
@@ -15,9 +17,6 @@ module.exports = app => {
         console.log(data)
 
     })
-    
-    app.delete('/api/mediafiles/delete/:id', MediaFilesController.newDelete); */
- 
-    app.post('/api/newSamples/new', MediaFilesController.newSample);
 
+    app.delete('/api/mediafiles/delete/:id', MediaFilesController.newDelete); */
 }

@@ -28,14 +28,9 @@ const NavBar =()=> {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
+                        
                         <Nav.Link><Link to='/' style={{textDecoration: 'none', color: 'white'}}>Home</Link></Nav.Link>
-                        <NavDropdown title="Find by Genre" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Terror</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">FX</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Other</NavDropdown.Item>
-                            </NavDropdown>
+                        <Nav.Link><Link to='/Profile' style={{textDecoration: 'none', color: 'white'}}>Profile Page</Link></Nav.Link>
                     </Nav>
                     <Nav>
                         {!context.user.firstName && <React.Fragment>

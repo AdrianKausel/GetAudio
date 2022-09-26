@@ -10,25 +10,9 @@ const NewSampleSchema = mongoose.Schema({
         type:String,
         required:[true,"Title is required"]
     },
-    /* description:{
-        type:String
-    }, */
-    tag: {
-        type:Array
+    file: {
+        type: Buffer
     },
-    active:{
-        type:Boolean
-    },
-    URL:{
-        type:String
-    }
-    /* {
-        type: String,
-    } */
-    /* media: {
-        type: Buffer,
-        required: [true, 'media  Required']
-    }, */
 })
     /* {timestamps:true});   */
 

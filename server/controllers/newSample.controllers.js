@@ -1,15 +1,27 @@
-const NewSample = require('../models/newSample.model');
+
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const secret = require('../config/jwt.config')
 
 module.exports.List = (req, res) => {
     NewSample.find()
-        .then(data => {
-            res.json({userComp: data})
-        }).catch(error => {
-            res.status(500).json({mensaje: error})
-        })
+    .then(data => {
+        res.json({audioData: data})
+    }).catch(error => {
+        res.status(500).json({mensaje: error})
+    })
+}
+
+module.exports.newSample = (req, res) => {
+    const {artist, title, tag, active, url} = req.body;
+
+    NewSample.create({
+        artist: artist,
+        title: title,
+
+    })
+    .then(data => res.json({audioData: data}))
+    .catch(error => res.json({error}))
 }
 
 /* module.exports.ListOne = (req, res) => {
@@ -41,15 +53,6 @@ module.exports.newCreate = (req, res) => {
 
 // NEW SAMPLE . .   .   .   . JAVIER
 
-module.exports.newSample = (req, res) => {
-    NewSample.create(req.body)
-    .then(data => {
-        //console.log('ss')
-        res.json({userComp: data})
-    }).catch(error => {
-        res.status(500).json({mensaje: error})
-    })
-}
 /* 
 module.exports.newDelete = (req, res) => {
     MediaFiles.findByIdAndDelete(req.params.id)
