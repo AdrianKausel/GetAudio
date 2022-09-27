@@ -11,7 +11,7 @@ const NewSampleSchema = mongoose.Schema({
         required:[true,"Title is required"]
     },
     file: {
-        type: Buffer
+        type: String
     },
 })
     /* {timestamps:true});   */
