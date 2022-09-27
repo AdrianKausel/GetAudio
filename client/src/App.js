@@ -18,6 +18,7 @@ import ProfilePage2 from './components/ProfilePage2';
 import AddComponent from './components/AddComponent';
 import AddComponentScreen from './components/AddComponentScreen';
 import AudioPlayer from './components/AudioPlayer';
+import AudioUploader from './components/AudioUpload';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path='/Profile' element={<ProfilePage1 />}></Route>
           <Route path='/Profile2' element={<ProfilePage2 />}></Route>
           <Route path='/AudioPlayer' element={<AudioPlayer />}></Route>
+          <Route path='/AudioUploader' element={<AudioUploader />}></Route>
 
           <Route path='/add' element={<AddComponentScreen />}></Route>
 

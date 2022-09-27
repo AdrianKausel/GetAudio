@@ -29,18 +29,19 @@ const NavBar =()=> {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         
-                        <Nav.Link><Link to='/' style={{textDecoration: 'none', color: 'white'}}>Home</Link></Nav.Link>
-                        <Nav.Link><Link to='/Profile' style={{textDecoration: 'none', color: 'white'}}>Profile Page</Link></Nav.Link>
+                        <Link className="links" to='/' style={{textDecoration: 'none', color: 'white'}}>Home</Link>
+                        <Link className="links" to='/Profile' style={{textDecoration: 'none', color: 'white'}}>Profile Page</Link>
+                        <Link className="links" to='/AudioUploader' style={{textDecoration: 'none', color: 'white'}}>Uploader Test</Link>
                     </Nav>
                     <Nav>
                         {!context.user.firstName && <React.Fragment>
-                        <Nav.Link><Link to='/register'  style={{textDecoration: 'none', color: 'white'}}>REGISTER</Link></Nav.Link>
-                        <Nav.Link><Link to='/LogIn' style={{textDecoration: 'none', color: 'white'}}>Log In</Link></Nav.Link>
+                        <Link className="links" to='/register'  style={{textDecoration: 'none', color: 'white'}}>REGISTER</Link>
+                        <Link className="links" to='/LogIn' style={{textDecoration: 'none', color: 'white'}}>Log In</Link>
                         </React.Fragment>
                         }
                         {context.user.firstName && <React.Fragment>
-                        <Nav.Link><Link to='/profile'  style={{textDecoration: 'none', color: 'white', fontSize:"large" ,fontWeight: "bold"}}>{context.user.firstName}<span>{""}</span>{context.user.lastName}</Link></Nav.Link>
-                        <Nav.Link><Link to='/' style={{textDecoration: 'none',fontSize:"large", color: 'white'}} >Log Out</Link></Nav.Link>
+                        <Link className="links" to='/profile'  style={{textDecoration: 'none', color: 'white', fontSize:"large" ,fontWeight: "bold"}}>{context.user.firstName}<span>{""}</span>{context.user.lastName}</Link>
+                        <Link className="links" to='/' style={{textDecoration: 'none',fontSize:"large", color: 'white'}} >Log Out</Link>
                         </React.Fragment>
                         }
                     </Nav>
