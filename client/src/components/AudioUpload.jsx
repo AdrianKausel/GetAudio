@@ -3,7 +3,6 @@ import Container from "react-bootstrap/esm/Container";
 import Form from 'react-bootstrap/Form'
 import axios from "axios";
 import Button from "react-bootstrap/esm/Button";
-import { useInstantTransition } from "framer-motion";
 import AudioUploadBar from "./AudioUploadBar";
 import ReactAudioPlayer from "react-audio-player";
 
@@ -23,14 +22,14 @@ const AudioUploader = () => {
         formData.append('file', file);
 
         try{
-            const res = await axios.post('/upload', formData, {
+            const res = await axios.post('/api/audioUpload/new', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }, 
                 onUploadProgress: progressEvent => {
                     setUploadPercentage(parseInt(Math.round((progressEvent.loaded * 100)/
                     progressEvent.total)))
-                    // clear upload bar
+
                     setTimeout(()=> setUploadPercentage(0),10000);
                 },
             });
