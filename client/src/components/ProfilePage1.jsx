@@ -35,9 +35,6 @@ const ProfilePage1 = () => {
                             <Nav.Item className="profileLink3">
                             <Nav.Link style={{textDecoration: 'none', fontWeight: 'Bold', color: hover ? 'black' : "white" }} onMouseEnter={()=>{setHover(true);}} onMouseLeave={()=>{setHover(false);}} eventKey="third">Your Library</Nav.Link>
                             </Nav.Item>
-                            <Nav.Item className="profileLink4">
-                            <Nav.Link style={{textDecoration: 'none', fontWeight: 'Bold', color: hover ? 'white' : "coal" }} onMouseEnter={()=>{setHover(true);}} onMouseLeave={()=>{setHover(false);}} eventKey="fourth">Edit Profile</Nav.Link>
-                            </Nav.Item>
                         </Nav>
                         </Col>
                         <Col sm={9}>
@@ -50,9 +47,6 @@ const ProfilePage1 = () => {
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
                             <Tab3 />
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="fourth">
-                            <Tab4 />
                             </Tab.Pane>
                         </Tab.Content>
                         </Col>

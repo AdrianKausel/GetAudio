@@ -10,23 +10,23 @@ const ListComponent =({selectTag1})=>{
     const [sounds,setSounds]=useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:8000/api/newSamples/')
-        .then(res=>{
-            console.log('this is res....', res)
-            console.log('this is res.data....', res.data)
-            console.log('this is res.data.userComp....', res.data.userComp)
-            console.log('selectTag1......', selectTag1)
-            console.log('sounds......', sounds)
-            console.log('sounds[0].name  ......', sounds)
+        // axios.get('http://localhost:8000/api/newSamples/')
+        // .then(res=>{
+        //     console.log('this is res....', res)
+        //     console.log('this is res.data....', res.data)
+        //     console.log('this is res.data.userComp....', res.data.userComp)
+        //     console.log('selectTag1......', selectTag1)
+        //     console.log('sounds......', sounds)
+        //     console.log('sounds[0].name  ......', sounds)
 
-            const sounds_temp=[]
-            res.data.userComp.forEach((sound)=>{
-                if(sound.tag.includes(`${selectTag1}`)){
-                    sounds_temp.push(sound)
-                }
-            })
-            setSounds(sounds_temp)
-        })
+        //     const sounds_temp=[]
+        //     res.data.userComp.forEach((sound)=>{
+        //         if(sound.tag.includes(`${selectTag1}`)){
+        //             sounds_temp.push(sound)
+        //         }
+        //     })
+        //     setSounds(sounds_temp)
+        // })
     },[selectTag1])
     
     

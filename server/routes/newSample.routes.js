@@ -4,7 +4,7 @@ const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' })
 const {authenticate} = require('../config/jwt.config');
 
-module.exports = app => {
+module.exports = (app) => {
     app.post('/api/newSamples/new', audioFilesController.uploadAudioFile);
 
     /* app.get('/api/mediafiles/:id', MediaFilesController.newFind);

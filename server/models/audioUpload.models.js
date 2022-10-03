@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-
+const bcrypt = require('bcrypt');
 
 const AudioUploaderSchema = mongoose.Schema({
     artist: {
         type: String
     },
-    fileName:{
+    name:{
         type: String
     },
     file: {
@@ -13,7 +13,7 @@ const AudioUploaderSchema = mongoose.Schema({
     },
 }, {timestamps:true})
 
-const AudioUploader = mongoose.model('AudioUploader', AudioUploaderSchema);
+const AudioUploader = mongoose.model('AudioUploader5', AudioUploaderSchema);
 
 module.exports = AudioUploader;
 

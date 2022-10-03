@@ -9,14 +9,25 @@ import MediaTitleDisplay from "./MediaTitleDisplay";
 import AddComponent from "./AddComponent";
 import ListComponent from "./ListComponent";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Main = () => {
 
     const control = useAnimation();
     const [ref, inView] = useInView();
-    const audioUrl = 'https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3';
+    const [audioSrc, setAudioSrc] = useState([]);
+
 
     const [selectTag1,setSelectTag1]=useState('');
+
+
+    const getUrl = ()=>{
+        axios.get('/api/audioUpload/63361ff569d936e093f5891e')
+            .then(resp =>{
+                setAudioSrc(resp.data.name)
+            })
+    }
+
 
     useEffect(() => {
         if (inView) {
@@ -24,6 +35,13 @@ const Main = () => {
         } else {
         control.start("hidden");
         }
+        const getUrl = ()=>{
+            axios.get('/api/audioUpload/63361ff569d936e093f5891e')
+                .then(resp =>{
+                    setAudioSrc(resp.data)
+                })
+        }
+
     }, [control, inView]);
 
     return(
@@ -33,46 +51,14 @@ const Main = () => {
                     <div className="searchcont">
                     <h1 className="titles1"> <span className="gettitle">get </span> What you need...</h1>
                         <input type="text" placeholder="What are you looking for?..." className="ltter"></input>
-                    </div>
-
-                    <br/>
-
-                    {/* <AddCompone nt/> */}
-
-                    <div className="div-2">
-                        <h2>
-                        Find by Genre: 
-                        </h2>
-                    
-                        <label>Select:</label>
-                        <select name="genre" onChange={(e)=>setSelectTag1(e.target.value)}>
-                            <option >Find by genre...</option>
-                            <option value="Terror">Terror</option>
-                            <option value="FX">FX</option>
-                            <option value="Action">Action</option>
-                            <option value="Happy">Happy</option>
-                            <option value="Ambient">Ambient</option>
-                            <option value="Sci-Fi">Sci-Fi</option>
-                            <option value="Techno">Techno</option>
-                        </select>
-
-                    </div>
-
-                    <ListComponent selectTag1={selectTag1} />
-
-                    <br/>
-
-                    <Link to={'/add'} ><h4 className="add-file-h2"> Add File</h4></Link>
-                    
-
-                    
-                    <div>
-                        <MediaTitleDisplay/>
-
-                        <MediaDisplay audioUrl={audioUrl} />
-                        <MediaDisplay/>
-                        <MediaDisplay/>
-                        <MediaDisplay/>
+                        <MediaDisplay audioUrl='Kalimba.mp3'/>
+                        <MediaDisplay audioUrl='sipsip.mp3'/>
+                        <MediaDisplay audioUrl='ChorusDancer .mp3'/>
+                        <MediaDisplay audioUrl='Locura.mp3'/>
+                        <MediaDisplay audioUrl='mystic.mp3'/>
+                        <MediaDisplay audioUrl='dance.mp3'/>
+                        <MediaDisplay audioUrl='slow.mp3'/>
+                        <MediaDisplay audioUrl={audioSrc}/>
                     </div>
                 </Container>
             

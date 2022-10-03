@@ -1,4 +1,4 @@
-
+const NewSample = require('../models/newSample.models')
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const secret = require('../config/jwt.config')
@@ -18,7 +18,9 @@ module.exports.newSample = (req, res) => {
     NewSample.create({
         artist: artist,
         title: title,
-
+        tag: tag,
+        active: active,
+        url: url
     })
     .then(data => res.json({audioData: data}))
     .catch(error => res.json({error}))

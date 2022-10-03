@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Container from "react-bootstrap/esm/Container";
 import soundPic from "../assets/sound2.gif"
 import ReactAudioPlayer from 'react-audio-player';
+import axios from "axios";
 
 
 const boxVariant = {
@@ -15,14 +16,18 @@ const MediaDisplay = (props) => {
 
     const control = useAnimation();
     const [ref, inView] = useInView();
+    const [audioSrc, setAudioSrc] = useState([]);
 
+
+    
     useEffect(() => {
         if (inView) {
         control.start("visible");
         } else {
         control.start("hidden");
         }
-    }, [control, inView]);
+    
+        }, [control, inView]);
 
     return(
             <div>
@@ -38,15 +43,16 @@ const MediaDisplay = (props) => {
                                     <div className="profilecol4">
                                         <img className="soundpics" src={soundPic}/>
                                     </div>
-                                    <div className="profilecol5 d-flex flex-wrap flex-row justify-content-start">
-                                        <h3 className="songsSpecs w-100"> Artist Name: {props.audioUrl}</h3>
-                                        <h3 className="songsSpecs w-100"> Song Name:</h3>
+                                    <div  className="profilecol5 d-flex flex-wrap flex-row justify-content-start">
+                                        <h3 className="songsSpecs w-100"> Artist Name: {"Adrian Kausel"}</h3>
+                                        <h3 className="songsSpecs w-100"> Song Name: {props.audioUrl}</h3>
                                         <ReactAudioPlayer
                                             className="d-flex justify-self-center w-100"
                                             src={props.audioUrl}
-                                            
                                             autoPlay={false}
-                                            controls
+                                            controls 
+
+                                            
                                         />
                                     </div>
                                     <div>

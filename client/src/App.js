@@ -24,6 +24,7 @@ import AudioUploader from './components/AudioUpload';
 function App() {
 
   const [user, setUser] = useState ({})
+
   
   return (
     <NavBarContext.Provider value={{user, setUser}} >
@@ -40,7 +41,7 @@ function App() {
           <Route path='/Profile' element={<ProfilePage1 />}></Route>
           <Route path='/Profile2' element={<ProfilePage2 />}></Route>
           <Route path='/AudioPlayer' element={<AudioPlayer />}></Route>
-          <Route path='/AudioUploader' element={<AudioUploader />}></Route>
+          <Route path='/AudioUploader' element={<AudioUploader/>}></Route>
 
           <Route path='/add' element={<AddComponentScreen />}></Route>
 

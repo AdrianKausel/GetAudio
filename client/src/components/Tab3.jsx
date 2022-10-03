@@ -1,31 +1,14 @@
 import React from "react";
 import soundPic from "../assets/sound2.gif"
+import MediaDisplay from "./mediaDisplay";
 const Tab3 = () =>{
 
     return(
         <div className="profilebody3">
-            <div className="mediacont">
-                <div className="profilecol4">
-                    <img className="soundpics" src={soundPic}/>
-                </div>
-                <div className="profilecol5">
-                    <ul>
-                        <h3 className="songsSpecs"> Artist Name:</h3>
-                        <h3 className="songsSpecs"> Song Name:</h3>
-                    </ul>
-                </div>
-            </div>
-            <div className="mediacont">
-                <div className="profilecol4">
-                    <img className="soundpics" src={soundPic}/>
-                </div>
-                <div className="profilecol5">
-                    <ul>
-                        <h3 className="songsSpecs"> Artist Name:</h3>
-                        <h3 className="songsSpecs"> Song Name:</h3>
-                    </ul>
-                </div>
-            </div>
+            <MediaDisplay audioUrl='Kalimba.mp3'/>
+            <MediaDisplay audioUrl='sipsip.mp3'/>
+            <MediaDisplay audioUrl='ChorusDancer .mp3'/>
+            <MediaDisplay audioUrl='Locura.mp3'/>
         </div>
     )
 }
